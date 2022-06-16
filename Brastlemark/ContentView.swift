@@ -9,16 +9,24 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = InhabitantViewModel()
-
+    
     var body: some View {
-            List(viewModel.population, id: \.id) { item in
-                VStack {
-                    Text(item.name)
-                        .font(.title2)
+        List(viewModel.population, id: \.id) { item in
+            HStack {
+                VStack(alignment: .leading) {
+                    Text("\(item.name)")
+                        .font(.system(size: 18, weight: .bold))
+                    
+                    Text("\(item.age)")
                 }
+                Spacer()
+                AsyncImage(url: URL(string: item.thumbnail))
+                    .frame(width: 90, height: 90)
+                    .clipShape(RoundedRectangle(cornerRadius: 9, style: .continuous))
             }
-            .task { await viewModel.loadData() }
-            .navigationTitle("Brastlewark")
+        }
+        .task { await viewModel.loadData() }
+        .navigationTitle("Brastlewark")
     }
 }
 
