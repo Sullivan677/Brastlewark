@@ -8,9 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject private var viewModel = InhabitantViewModel()
+
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List(viewModel.population, id: \.id) { item in
+                VStack {
+                    Text(item.name)
+                        .font(.title2)
+                }
+            }
+            .task { await viewModel.loadData() }
+        }
     }
 }
 

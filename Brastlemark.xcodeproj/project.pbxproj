@@ -14,6 +14,8 @@
 		75993916285B1E0B0057C705 /* BrastlemarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75993915285B1E0B0057C705 /* BrastlemarkTests.swift */; };
 		75993920285B1E0B0057C705 /* BrastlemarkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7599391F285B1E0B0057C705 /* BrastlemarkUITests.swift */; };
 		75993922285B1E0B0057C705 /* BrastlemarkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75993921285B1E0B0057C705 /* BrastlemarkUITestsLaunchTests.swift */; };
+		7599392F285B1E340057C705 /* Brastlewark .swift in Sources */ = {isa = PBXBuildFile; fileRef = 7599392E285B1E340057C705 /* Brastlewark .swift */; };
+		75993931285B1E3A0057C705 /* InhabitantViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75993930285B1E3A0057C705 /* InhabitantViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		7599391B285B1E0B0057C705 /* BrastlemarkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrastlemarkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7599391F285B1E0B0057C705 /* BrastlemarkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrastlemarkUITests.swift; sourceTree = "<group>"; };
 		75993921285B1E0B0057C705 /* BrastlemarkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrastlemarkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7599392E285B1E340057C705 /* Brastlewark .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Brastlewark .swift"; sourceTree = "<group>"; };
+		75993930285B1E3A0057C705 /* InhabitantViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InhabitantViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				75993904285B1E090057C705 /* BrastlemarkApp.swift */,
 				75993906285B1E090057C705 /* ContentView.swift */,
+				75993930285B1E3A0057C705 /* InhabitantViewModel.swift */,
+				7599392E285B1E340057C705 /* Brastlewark .swift */,
 				75993908285B1E0A0057C705 /* Assets.xcassets */,
 				7599390A285B1E0A0057C705 /* Preview Content */,
 			);
@@ -259,6 +265,8 @@
 			files = (
 				75993907285B1E090057C705 /* ContentView.swift in Sources */,
 				75993905285B1E090057C705 /* BrastlemarkApp.swift in Sources */,
+				75993931285B1E3A0057C705 /* InhabitantViewModel.swift in Sources */,
+				7599392F285B1E340057C705 /* Brastlewark .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
