@@ -13,37 +13,38 @@ struct ContentView: View {
     var body: some View {
         List(viewModel.population, id: \.id) { population in
             NavigationLink(destination: DetailView(population: population)) {
-            HStack {
-                VStack(alignment: .leading) {
-                    Text("\(population.name)")
-                        .font(.title3)
-                        .bold()
-                    Text("\(population.age)")
-                        .font(.headline)
-                }
-                Spacer()
-                AsyncImage(url: URL(string: population.thumbnail)) { phase in
-                    switch phase {
-                    case .empty:
-                        ProgressView()
-                    case .success(let image):
-                        image.resizable()
-                            .aspectRatio(contentMode: .fill)
-                            .frame(width: 90, height: 90, alignment: .center)
-                            .cornerRadius(12)
-                    case .failure:
-                        Color.gray
-                            .frame(width: 90, height: 90)
-                            .cornerRadius(12)
-                    @unknown default:
-                        EmptyView()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("\(population.name)")
+                            .font(.title3)
+                            .bold()
+                        Text("\(population.age)")
+                            .font(.headline)
+                    }
+                    Spacer()
+                    AsyncImage(url: URL(string: population.thumbnail)) { phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image.resizable()
+                                .aspectRatio(contentMode: .fill)
+                                .clipShape(Circle())
+                                .shadow(radius: 2)
+                                .frame(width: 90, height: 90, alignment: .center)
+                        case .failure:
+                            Color.gray
+                                .frame(width: 90, height: 90)
+                                .cornerRadius(12)
+                        @unknown default:
+                            EmptyView()
+                        }
                     }
                 }
             }
-            }
         }.listStyle(GroupedListStyle())
-        .task { await viewModel.loadData() }
-        .navigationTitle("Brastlewark")
+            .task { await viewModel.loadData() }
+            .navigationTitle("Brastlewark")
     }
 }
 
