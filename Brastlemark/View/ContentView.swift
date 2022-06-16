@@ -35,7 +35,7 @@ struct ContentView: View {
                         case .failure:
                             Color.gray
                                 .frame(width: 90, height: 90)
-                                .cornerRadius(12)
+                                .clipShape(Circle())
                         @unknown default:
                             EmptyView()
                         }
