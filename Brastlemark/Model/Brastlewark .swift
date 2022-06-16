@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Response: Codable {
+struct Result: Codable {
     let Brastlewark: [Brastlewark]
 }
 

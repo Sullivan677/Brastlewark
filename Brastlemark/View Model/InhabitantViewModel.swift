@@ -22,7 +22,7 @@ class InhabitantViewModel: ObservableObject {
             }
             let decoder = JSONDecoder()
             decoder.keyDecodingStrategy = .convertFromSnakeCase
-            if let decodedResponse = try? decoder.decode(Response.self, from: data) {
+            if let decodedResponse = try? decoder.decode(Result.self, from: data) {
                 population = decodedResponse.Brastlewark
                 print("\(decodedResponse.Brastlewark)")
             }

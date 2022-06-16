@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		756ECF5E285B2AA9003EE0BF /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756ECF5D285B2AA9003EE0BF /* DetailView.swift */; };
 		75993905285B1E090057C705 /* BrastlemarkApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75993904285B1E090057C705 /* BrastlemarkApp.swift */; };
 		75993907285B1E090057C705 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75993906285B1E090057C705 /* ContentView.swift */; };
 		75993909285B1E0A0057C705 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75993908285B1E0A0057C705 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		756ECF5C285B26C9003EE0BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		756ECF5D285B2AA9003EE0BF /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		75993901285B1E090057C705 /* Brastlemark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brastlemark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75993904285B1E090057C705 /* BrastlemarkApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrastlemarkApp.swift; sourceTree = "<group>"; };
 		75993906285B1E090057C705 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		756ECF5F285B2EBC003EE0BF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				756ECF5D285B2AA9003EE0BF /* DetailView.swift */,
+				75993906285B1E090057C705 /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		756ECF60285B2EC7003EE0BF /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				75993930285B1E3A0057C705 /* InhabitantViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		756ECF61285B2ED4003EE0BF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7599392E285B1E340057C705 /* Brastlewark .swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		759938F8285B1E090057C705 = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +128,9 @@
 			children = (
 				756ECF5C285B26C9003EE0BF /* Info.plist */,
 				75993904285B1E090057C705 /* BrastlemarkApp.swift */,
-				75993906285B1E090057C705 /* ContentView.swift */,
-				75993930285B1E3A0057C705 /* InhabitantViewModel.swift */,
-				7599392E285B1E340057C705 /* Brastlewark .swift */,
+				756ECF61285B2ED4003EE0BF /* Model */,
+				756ECF60285B2EC7003EE0BF /* View Model */,
+				756ECF5F285B2EBC003EE0BF /* View */,
 				75993908285B1E0A0057C705 /* Assets.xcassets */,
 				7599390A285B1E0A0057C705 /* Preview Content */,
 			);
@@ -268,6 +295,7 @@
 				75993907285B1E090057C705 /* ContentView.swift in Sources */,
 				75993905285B1E090057C705 /* BrastlemarkApp.swift in Sources */,
 				75993931285B1E3A0057C705 /* InhabitantViewModel.swift in Sources */,
+				756ECF5E285B2AA9003EE0BF /* DetailView.swift in Sources */,
 				7599392F285B1E340057C705 /* Brastlewark .swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
