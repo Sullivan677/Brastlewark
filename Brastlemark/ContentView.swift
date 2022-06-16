@@ -11,7 +11,6 @@ struct ContentView: View {
     @StateObject private var viewModel = InhabitantViewModel()
 
     var body: some View {
-        NavigationView {
             List(viewModel.population, id: \.id) { item in
                 VStack {
                     Text(item.name)
@@ -19,7 +18,7 @@ struct ContentView: View {
                 }
             }
             .task { await viewModel.loadData() }
-        }
+            .navigationTitle("Brastlewark")
     }
 }
 

@@ -18,7 +18,7 @@ struct Brastlewark: Codable, Identifiable {
     let age: Int
     let weight: Double
     let height: Double
-    let hair_color: String
+    let hairColor: String
     let professions : [String]
     let friends: [String]
 }
