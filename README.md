@@ -4,6 +4,11 @@
 
 The app features a List, a Detail View and a search feature.
 
+### URL to fetch the JSON response
+
+https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json
+
+
 
 ### Architecture
 
