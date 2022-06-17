@@ -1,6 +1,6 @@
 # Brastlewark
 
-## A list with details and search fetching a remote URL built with SwiftUI
+## A list with details and search built with SwiftUI
 
 The app features a List, a Detail View and a search feature.
 
