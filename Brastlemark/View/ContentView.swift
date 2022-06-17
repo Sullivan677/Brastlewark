@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject private var viewModel = InhabitantViewModel()
+    @State private var query = ""
     
     var body: some View {
         List(viewModel.population, id: \.id) { population in
@@ -42,8 +43,14 @@ struct ContentView: View {
                     }
                 }
             }
-        }.listStyle(GroupedListStyle())
-            .task { await viewModel.loadData() }
+        }.task { await viewModel.loadData() }
+        // Implementing the search feature in the UI
+        .searchable(text: $query, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search by name")
+            .disableAutocorrection(true)
+            .onChange(of: query) { newValue in
+                viewModel.search(with: newValue)
+            }
+            .listStyle(GroupedListStyle())
             .navigationTitle("Brastlewark")
     }
 }
